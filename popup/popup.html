@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Niji Prompt Generator</h1>
+    <div class="prompt-container">
+      <label for="userPromptInput">Prompt:</label>
+      <textarea id="userPromptInput" placeholder="Enter your prompt" rows="4" cols="50" disabled></textarea>
+      <label for="randomPromptCheckbox">
+        <input type="checkbox" id="randomPromptCheckbox" checked> Random Prompt
+      </label>
+    </div>
+    <label for="aspectRatio">Aspect Ratio:</label>
+    <select id="aspectRatio">
+      <option value="9:16">9:16</option>
+      <option value="3:4">3:4</option>
+      <option value="1:1">1:1</option>
+      <option value="4:3">4:3</option>
+    </select>
+    <label for="chaosRange">Chaos: <span id="chaosValue">0</span></label>
+    <input type="range" id="chaosRange" min="0" max="100" value="0">
+    <div class="sref-container">
+      <label for="srefInput">Sref:</label>
+      <input type="number" id="srefInput" min="0" placeholder="Enter sref value" disabled title="Visit https://srefhunter.top/ for more sref codes">
+      <label for="randomizeCheckbox">
+        <input type="checkbox" id="randomizeCheckbox" checked> Randomize
+      </label>
+    </div>
+    <label for="repeatRange">Repeat: <span id="repeatValue">1</span></label>
+    <input type="range" id="repeatRange" min="1" max="4" value="1">
+    <label for="promptOutput">Generated Prompt:</label>
+    <textarea id="promptOutput" rows="4" cols="50" readonly placeholder="Generated Prompt"></textarea>
+    <div class="button-container">
+      <button id="copyToClipboard">Copy to Clipboard</button>
+      <button id="fillTextarea">Generate Prompt</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

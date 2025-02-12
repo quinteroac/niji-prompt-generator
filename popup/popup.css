@@ -1,0 +1,90 @@
+:root {
+  --color-primary: #e1e5eeff;
+  --color-tertiary: rgb(27, 28, 31);
+  --color-quaternary: rgb(151, 180, 147);
+  --color-quinary: #2a324bff;
+  --color-secondary: rgb(44, 44, 46);
+}
+
+body {
+  width: 350px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-primary);
+  color: var(--color-quinary);
+}
+
+h1 {
+  font-size: 18px;
+  color: var(--color-secondary);
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  resize: none;
+  border: 1px solid var(--color-quinary);
+  background-color: white;
+  color: var(--color-quinary);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.sref-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sref-container label {
+  margin-right: 10px;
+}
+
+.sref-container input[type="number"] {
+  flex: 1;
+  margin-right: 10px;
+  border: 1px solid var(--color-quinary);
+  background-color: white;
+  color: var(--color-quinary);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  flex: 1;
+  padding: 10px 20px;
+  background-color: var(--color-tertiary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button:hover {
+  background-color: var(--color-quaternary);
+}
+
+input[type="checkbox"]:checked + label {
+  color: var(--color-secondary);
+} 
